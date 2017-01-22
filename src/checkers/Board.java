@@ -127,5 +127,16 @@ public class Board implements Remote, Serializable {
 
 			return -1;
 		}
+		
+		private boolean isPositionOccupied(Position pos){
+			for (int i = 0; i < piecePlacement.length; i++){
+				if(piecePlacement[i] != null){
+					if(piecePlacement[i].getPiecePosition().equals(pos)){
+						return true;
+					}
+				}
+			}
+			return false;
+		}
 }
 	
